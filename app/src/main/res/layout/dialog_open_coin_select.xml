@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_len_465px"
+        android:layout_marginTop="@dimen/common_len_228px"
+        android:layout_marginBottom="@dimen/common_len_228px"
+        android:background="@drawable/shape_white_20"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/coin_title_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/common_len_130px"
+            android:text="@string/task_open_coin_wait_title"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/common_text_size_40px"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/common_len_20px"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/coin_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/common_len_10px"
+                android:paddingRight="@dimen/common_len_10px"
+                android:textColor="@color/color_FFC244"
+                android:includeFontPadding="false"
+                android:textSize="@dimen/common_text_size_80px"
+                tools:text="1000" />
+
+            <ImageView
+                android:layout_width="@dimen/common_len_66px"
+                android:layout_height="@dimen/common_len_66px"
+                android:src="@drawable/icon_jinbi"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/cancel_txt"
+                android:layout_width="@dimen/common_len_240px"
+                android:layout_height="@dimen/common_len_80px"
+                android:background="@drawable/shape_gray_60"
+                android:gravity="center"
+                android:layout_margin="@dimen/common_len_30px"
+                android:text="@string/task_open_coin_cancel_title"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/common_text_size_32px"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/video_txt"
+                android:layout_width="@dimen/common_len_240px"
+                android:layout_height="@dimen/common_len_80px"
+                android:background="@drawable/shape_login_btn"
+                android:layout_margin="@dimen/common_len_30px"
+                android:gravity="center"
+                android:text="@string/task_open_coin_video_title"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/common_text_size_32px"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/home_img_baoxiang_close" />
+</RelativeLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_14181B"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_common_toolbar" />
+
+    <cn.weli.svideo.baselib.component.widget.smartrefresh.WeRefreshLayout
+        android:id="@+id/task_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <cn.weli.svideo.baselib.component.widget.WeEmptyErrorView
+                android:id="@+id/task_empty_error_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <ScrollView
+                android:id="@+id/task_content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/common_len_30px"
+                        android:background="@drawable/money_img_card"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/coin_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="@dimen/common_len_36px"
+                                android:paddingBottom="@dimen/common_len_10px"
+                                android:text="@string/task_coin_get_title"
+                                android:textColor="@color/color_white"
+                                android:textSize="@dimen/common_text_size_32px"
+                                android:textStyle="bold" />
+
+                            <cn.weli.svideo.common.widget.RichTextView
+                                android:id="@+id/coin_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="@dimen/common_len_20px"
+                                android:textSize="@dimen/common_text_size_60px"
+                                android:textStyle="bold"
+                                app:richText_Color="@color/color_white"
+                                app:richText_decimal_textSize="@dimen/common_text_size_60px"
+                                app:richText_integer_textSize="@dimen/common_text_size_60px"
+                                app:richText_unit_textSize="@dimen/common_text_size_36px" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="@dimen/common_len_2px"
+                            android:layout_height="@dimen/common_len_80px"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/shape_task_center_line_bg" />
+
+                        <LinearLayout
+                            android:id="@+id/cash_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="@dimen/common_len_36px"
+                                android:paddingBottom="@dimen/common_len_10px"
+                                android:text="@string/task_cash_get_title"
+                                android:textColor="@color/color_white"
+                                android:textSize="@dimen/common_text_size_32px"
+                                android:textStyle="bold" />
+
+                            <cn.weli.svideo.common.widget.RichTextView
+                                android:id="@+id/cash_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="@dimen/common_len_20px"
+                                android:textSize="@dimen/common_text_size_60px"
+                                android:textStyle="bold"
+                                app:richText_Color="@color/color_white"
+                                app:richText_decimal_textSize="@dimen/common_text_size_60px"
+                                app:richText_integer_textSize="@dimen/common_text_size_60px"
+                                app:richText_unit_textSize="@dimen/common_text_size_36px" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/task_coin_info_title"
+                        android:textColor="@color/color_50_white"
+                        android:textSize="@dimen/common_text_size_28px" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/task_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_len_20px" />
+                </LinearLayout>
+            </ScrollView>
+        </FrameLayout>
+
+    </cn.weli.svideo.baselib.component.widget.smartrefresh.WeRefreshLayout>
+</LinearLayout>

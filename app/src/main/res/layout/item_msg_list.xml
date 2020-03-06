@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/msg_icon_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_len_30px"
+        android:layout_marginRight="@dimen/common_len_15px"
+        android:layout_marginBottom="@dimen/common_len_40px"
+        android:layout_centerVertical="true"
+        android:src="@drawable/xiaoxi_icon_xitong" />
+
+    <LinearLayout
+        android:id="@+id/msg_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/msg_icon_img"
+        android:layout_marginEnd="@dimen/common_len_30px"
+        android:layout_marginTop="@dimen/common_len_40px"
+        android:layout_marginRight="@dimen/common_len_30px"
+        android:layout_toEndOf="@id/msg_icon_img"
+        android:layout_toRightOf="@id/msg_icon_img"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/msg_title_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_E7E7E7"
+            android:textSize="@dimen/common_text_size_36px"
+            tools:text="金币结算" />
+
+        <TextView
+            android:id="@+id/msg_time_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_888888"
+            android:textSize="@dimen/common_text_size_30px"
+            tools:text="11-12 20:25" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/msg_content_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/msg_title_layout"
+        android:layout_marginEnd="@dimen/common_len_30px"
+        android:layout_marginRight="@dimen/common_len_30px"
+        android:layout_toEndOf="@id/msg_icon_img"
+        android:layout_toRightOf="@id/msg_icon_img"
+        android:paddingTop="@dimen/common_len_20px"
+        android:paddingBottom="@dimen/common_len_40px"
+        android:textColor="@color/color_888888"
+        android:textSize="@dimen/common_text_size_30px"
+        tools:text="您账户中的余额即将在12.10过期，过期后余额将清零，请您及时处理" />
+</RelativeLayout>

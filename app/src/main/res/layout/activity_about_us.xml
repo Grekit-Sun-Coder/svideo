@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_common_toolbar" />
+
+    <ImageView
+        android:id="@+id/app_logo_img"
+        android:layout_width="@dimen/common_len_160px"
+        android:layout_height="@dimen/common_len_160px"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/common_len_60px"
+        android:background="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/app_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="@dimen/common_len_30px"
+        android:textColor="@color/color_E7E7E7"
+        android:textSize="@dimen/common_text_size_32px"
+        tools:text="鲤刷刷" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/common_len_40px"
+        android:paddingBottom="@dimen/common_len_40px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="@dimen/common_len_30px"
+            android:text="@string/about_wx_title"
+            android:textColor="@color/color_E7E7E7"
+            android:textSize="@dimen/common_text_size_36px" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_horizontal"
+            android:padding="@dimen/common_len_30px"
+            android:text="@string/about_wx_content_title"
+            android:textColor="@color/color_888888"
+            android:textSize="@dimen/common_text_size_36px" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal|bottom"
+        android:paddingBottom="@dimen/common_len_60px"
+        android:text="@string/about_right_title"
+        android:textColor="@color/color_E7E7E7"
+        android:textSize="@dimen/common_text_size_30px" />
+</LinearLayout>

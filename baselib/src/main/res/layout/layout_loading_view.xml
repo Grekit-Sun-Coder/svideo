@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.weli.svideo.baselib.component.widget.loading.LoadingIndicatorView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/loading_view"
+    android:layout_width="@dimen/common_len_100px"
+    android:layout_height="@dimen/common_len_100px">
+
+</cn.weli.svideo.baselib.component.widget.loading.LoadingIndicatorView>

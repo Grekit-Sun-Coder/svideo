@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/common_len_66px"
+    android:background="@drawable/shape_common_dialog_bg">
+
+    <ImageView
+        android:id="@+id/update_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/common_len_30px"
+        android:layout_marginRight="@dimen/common_len_30px"
+        android:src="@drawable/icon_close" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/update_close"
+        android:layout_marginTop="@dimen/common_len_26px"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_len_2px"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/common_len_90px"
+                android:layout_marginRight="@dimen/common_len_90px"
+                android:src="@drawable/home_img_update_title" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/main_find_update"
+                android:textColor="@color/color_FF7C21"
+                android:textSize="@dimen/common_len_48px" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/ver_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_len_20px"
+            android:layout_gravity="center_horizontal"
+            tools:text="V1.0.3"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/common_len_32px" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_len_60px"
+            android:layout_marginTop="@dimen/common_len_40px"
+            android:text="@string/main_update_content"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/common_len_32px" />
+
+        <TextView
+            android:id="@+id/update_content"
+            android:layout_width="@dimen/common_len_500px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_len_60px"
+            android:layout_marginTop="@dimen/common_len_30px"
+            android:lineSpacingExtra="@dimen/common_len_30px"
+            android:maxHeight="@dimen/common_len_250px"
+            android:scrollbars="vertical"
+            tools:text="1.视频加载速度优化,刷新视频更流畅\n2.修复已知bug\n3.新增开宝箱功能\n4.金币翻倍活动上线，快来参加吧！"
+            android:textColor="@color/color_666666"
+            android:textSize="@dimen/common_len_30px" />
+
+        <TextView
+            android:id="@+id/update"
+            android:layout_width="@dimen/common_len_360px"
+            android:layout_height="@dimen/common_len_100px"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/common_len_60px"
+            android:layout_marginBottom="@dimen/common_len_60px"
+            android:background="@drawable/shape_login_btn"
+            android:gravity="center"
+            android:text="@string/main_update_str"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/common_len_36px"
+            android:textStyle="bold" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical|center"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/stat_sys_download" />
+
+        <TextView
+            android:id="@+id/tv_notification_appName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/color_A4A4A4"
+            android:textSize="18sp"
+            tools:text="ace" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_notification_progressValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7%"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/color_black"
+            android:textSize="18sp" />
+
+        <ProgressBar
+            android:id="@+id/progressbar_notification"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:indeterminate="false"
+            android:progress="10"
+            android:progressDrawable="@drawable/down_progress" />
+
+    </LinearLayout>
+
+</LinearLayout>

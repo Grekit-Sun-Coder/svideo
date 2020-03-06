@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_14181B">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_common_toolbar" />
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/profit_appbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:elevation="0dp"
+                app:layout_behavior="cn.weli.svideo.common.widget.WeAppBarBehavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_len_30px"
+                    android:layout_marginTop="@dimen/common_len_30px"
+                    android:layout_marginRight="@dimen/common_len_30px"
+                    android:background="@drawable/shape_mine_profit_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_scrollFlags="scroll">
+
+                    <LinearLayout
+                        android:id="@+id/coin_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/common_len_36px"
+                            android:paddingBottom="@dimen/common_len_10px"
+                            android:text="@string/task_coin_get_title"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/common_text_size_32px"
+                            android:textStyle="bold" />
+
+                        <cn.weli.svideo.common.widget.RichTextView
+                            android:id="@+id/coin_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/common_len_20px"
+                            android:textSize="@dimen/common_text_size_60px"
+                            android:textStyle="bold"
+                            app:richText_Color="@color/color_FFC244"
+                            app:richText_decimal_textSize="@dimen/common_text_size_60px"
+                            app:richText_integer_textSize="@dimen/common_text_size_60px"
+                            app:richText_unit_textSize="@dimen/common_text_size_36px" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/common_len_2px"
+                        android:layout_height="@dimen/common_len_80px"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/color_14181B" />
+
+                    <LinearLayout
+                        android:id="@+id/cash_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/common_len_36px"
+                            android:paddingBottom="@dimen/common_len_10px"
+                            android:text="@string/task_cash_get_title"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/common_text_size_32px"
+                            android:textStyle="bold" />
+
+                        <cn.weli.svideo.common.widget.RichTextView
+                            android:id="@+id/cash_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/common_len_20px"
+                            android:textSize="@dimen/common_text_size_60px"
+                            android:textStyle="bold"
+                            app:richText_Color="@color/color_FFC244"
+                            app:richText_decimal_textSize="@dimen/common_text_size_60px"
+                            app:richText_integer_textSize="@dimen/common_text_size_60px"
+                            app:richText_unit_textSize="@dimen/common_text_size_36px" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_len_30px"
+                    android:layout_marginRight="@dimen/common_len_30px"
+                    android:layout_marginBottom="@dimen/common_len_30px"
+                    android:background="@drawable/shape_mine_rate_bg"
+                    app:layout_scrollFlags="scroll">
+
+                    <TextView
+                        android:id="@+id/rate_title_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/common_len_30px"
+                        android:paddingTop="@dimen/common_len_16px"
+                        android:paddingRight="@dimen/common_len_30px"
+                        android:paddingBottom="@dimen/common_len_10px"
+                        android:textColor="@color/color_E7E7E7"
+                        android:textSize="@dimen/common_text_size_26px"
+                        android:drawableRight="@drawable/shouyi_icon_wenhao"
+                        android:drawableEnd="@drawable/shouyi_icon_wenhao"
+                        android:drawablePadding="@dimen/common_len_10px"
+                        android:text="@string/profit_rate_title"/>
+
+                    <TextView
+                        android:id="@+id/rate_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rate_title_txt"
+                        android:paddingLeft="@dimen/common_len_30px"
+                        android:paddingRight="@dimen/common_len_30px"
+                        android:paddingBottom="@dimen/common_len_14px"
+                        android:textColor="@color/color_E7E7E7"
+                        android:textSize="@dimen/common_text_size_26px"/>
+
+                    <TextView
+                        android:id="@+id/withdraw_txt"
+                        android:layout_width="@dimen/common_len_140px"
+                        android:layout_height="@dimen/common_len_52px"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="@dimen/common_len_20px"
+                        android:layout_marginEnd="@dimen/common_len_30px"
+                        android:layout_marginRight="@dimen/common_len_30px"
+                        android:layout_marginBottom="@dimen/common_len_20px"
+                        android:background="@drawable/shape_login_btn"
+                        android:gravity="center"
+                        android:text="@string/profit_withdraw_title"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/common_text_size_26px"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    app:layout_scrollFlags="scroll">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="@string/profit_total_income_title"
+                        android:textColor="@color/color_50_white"
+                        android:textSize="@dimen/common_text_size_28px" />
+
+                    <TextView
+                        android:id="@+id/total_income_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/color_FFC244"
+                        android:textSize="@dimen/common_text_size_28px" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/common_len_40px"
+                    app:layout_collapseMode="pin"
+                    app:layout_scrollFlags="exitUntilCollapsed|enterAlways|enterAlwaysCollapsed">
+
+                    <net.lucode.hackware.magicindicator.MagicIndicator
+                        android:id="@+id/profit_tab_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/common_len_80px"
+                        android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+            </android.support.design.widget.AppBarLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/profit_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        </android.support.design.widget.CoordinatorLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/watch_action_txt"
+        android:layout_width="@dimen/common_len_360px"
+        android:layout_height="@dimen/common_len_100px"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="@dimen/common_len_40px"
+        android:background="@drawable/shape_login_btn"
+        android:gravity="center"
+        android:text="@string/profit_watch_title"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/common_text_size_36px"
+        android:textStyle="bold" />
+</FrameLayout>

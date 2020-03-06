@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.weli.svideo.module.video.component.widget.videoheart.HeartRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/video_heart_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:heart_degrees_interval_max="20"
+    app:heart_degrees_interval_min="-20"
+    app:heart_swipe_image="@drawable/video_icon_like_shuangji">
+
+    <cn.weli.svideo.module.video.component.widget.VideoPlayView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:useTextureViewBacking="true" />
+
+    <com.qq.e.ads.nativ.widget.NativeAdContainer
+        android:id="@+id/video_gdt_ad_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <FrameLayout
+        android:id="@+id/video_ad_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <View
+        android:id="@+id/video_bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_len_580px"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_video_bottom_bg" />
+
+    <View
+        android:id="@+id/video_ad_click_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/video_ad_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/video_ad_info_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_len_4px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/video_ad_title_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="@dimen/common_len_500px"
+                    android:layout_marginStart="@dimen/common_len_30px"
+                    android:layout_marginLeft="@dimen/common_len_30px"
+                    android:layout_marginEnd="@dimen/common_len_30px"
+                    android:layout_marginRight="@dimen/common_len_30px"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="true"
+                    android:singleLine="true"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/common_text_size_36px"
+                    tools:text="他曾三次向董卿求婚被拒，如今却变成这样，你怎么看？"/>
+
+                <ImageView
+                    android:id="@+id/video_ad_icon_img"
+                    android:layout_width="@dimen/common_len_34px"
+                    android:layout_height="@dimen/common_len_30px"
+                    android:layout_marginRight="@dimen/common_len_8px"
+                    android:layout_marginTop="@dimen/common_len_4px"
+                    android:src="@drawable/img_jinritoutiao" />
+
+                <ImageView
+                    android:id="@+id/video_ad_tag_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_len_4px"
+                    android:src="@drawable/img_ad" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/video_title_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/common_len_30px"
+                android:layout_marginLeft="@dimen/common_len_30px"
+                android:gravity="bottom"
+                android:lineSpacingExtra="@dimen/common_len_8px"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/common_len_10px"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/common_text_size_34px"
+                android:textStyle="bold"
+                tools:text="他曾三次向董卿求婚被拒，如今却变成这样，你怎么看？" />
+
+            <TextView
+                android:id="@+id/video_ad_action_txt"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_len_84px"
+                android:layout_marginTop="@dimen/common_len_30px"
+                android:layout_marginBottom="@dimen/common_len_40px"
+                android:layout_marginStart="@dimen/common_len_30px"
+                android:layout_marginLeft="@dimen/common_len_30px"
+                android:layout_marginRight="@dimen/common_len_30px"
+                android:layout_marginEnd="@dimen/common_len_30px"
+                android:gravity="center"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/common_text_size_34px" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/common_len_40px">
+
+            <TextView
+                android:id="@+id/video_praise_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_len_40px"
+                android:drawableTop="@drawable/home_icon_dianzan_normal"
+                android:drawablePadding="@dimen/common_len_10px"
+                android:gravity="center"
+                android:minWidth="@dimen/common_len_170px"
+                android:text="@string/video_like_title"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/common_text_size_26px" />
+
+            <TextView
+                android:id="@+id/video_share_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/home_icon_share"
+                android:drawablePadding="@dimen/common_len_10px"
+                android:gravity="center"
+                android:minWidth="@dimen/common_len_144px"
+                android:text="@string/share_title"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/common_text_size_26px" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/video_complete_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_90_black"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/common_len_70px"
+        android:paddingRight="@dimen/common_len_70px"
+        android:visibility="gone"
+        tools:visibility="gone">
+
+        <ImageView
+            android:id="@+id/video_complete_logo_img"
+            android:layout_width="@dimen/common_len_200px"
+            android:layout_height="@dimen/common_len_200px"
+            tools:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/video_complete_title_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_len_32px"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/common_text_size_48px"
+            tools:text="@string/app_name" />
+
+        <TextView
+            android:id="@+id/video_complete_desc_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/common_text_size_30px"
+            tools:text="@string/video_rotate_title" />
+
+        <TextView
+            android:id="@+id/video_complete_action_txt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_len_84px"
+            android:layout_marginTop="@dimen/common_len_116px"
+            android:background="@drawable/shape_video_ad_btn_bg_selected"
+            android:gravity="center"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/common_text_size_34px"
+            tools:text="@string/video_complete_play_title" />
+
+        <TextView
+            android:id="@+id/video_complete_play_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_len_20px"
+            android:padding="@dimen/common_len_20px"
+            android:text="@string/video_complete_play_title"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/common_text_size_30px" />
+    </LinearLayout>
+
+</cn.weli.svideo.module.video.component.widget.videoheart.HeartRelativeLayout>

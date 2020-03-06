@@ -1,0 +1,315 @@
+Index: app/src/main/java/cn/weli/svideo/module/video/model/bean/VideoBean.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/cn/weli/svideo/module/video/model/bean/VideoBean.java	(revision 9053e3b15e553eb12b2adda643c5530041ced2c0)
++++ app/src/main/java/cn/weli/svideo/module/video/model/bean/VideoBean.java	(date 1582792569000)
+@@ -1,9 +1,13 @@
+ package cn.weli.svideo.module.video.model.bean;
+ 
+ import java.io.Serializable;
++import java.util.ArrayList;
++import java.util.List;
+ 
++import cn.weli.svideo.WlVideoAppInfo;
+ import cn.weli.svideo.advert.bean.BaseDrawVideoBean;
+ import cn.weli.svideo.advert.kuaima.ETKuaiMaAdData;
++import cn.weli.svideo.baselib.utils.StringUtil;
+ import cn.weli.svideo.module.task.model.bean.AdConfigBean;
+ import cn.weli.svideo.module.task.model.bean.AdDownloadTaskBean;
+ import cn.weli.svideo.module.task.model.bean.AdJumpTaskBean;
+@@ -77,4 +81,21 @@
+             return has_praise == HAS_PRAISE;
+         }
+     }
++
++    public static void filterAd(List<VideoBean> list) {
++        if (list == null || list.isEmpty()) {
++            return;
++        }
++        if (WlVideoAppInfo.getInstance().isNeedFilterAd()) {
++            List<VideoBean> removeList = new ArrayList<>();
++            for (VideoBean bean : list) {
++                if (!StringUtil.equals(bean.feed_item_type, AdConfigBean.VIDEO_TYPE_POST)) {
++                    removeList.add(bean);
++                }
++            }
++            if (!removeList.isEmpty()) {
++                list.removeAll(removeList);
++            }
++        }
++    }
+ }
+Index: app/src/main/java/cn/weli/svideo/WlVideoApplication.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/cn/weli/svideo/WlVideoApplication.java	(revision 9053e3b15e553eb12b2adda643c5530041ced2c0)
++++ app/src/main/java/cn/weli/svideo/WlVideoApplication.java	(date 1582792551000)
+@@ -89,6 +89,7 @@
+         String channel = WalleChannelReader.getChannel(getApplicationContext());
+         channel = StringUtil.isNull(channel) ? BusinessConstants.DEFAULT_CHANNEL : channel;
+         SharePrefUtil.saveInfoToPref(SharePrefConstant.PREF_APP_CHANNEL, channel);
++        WlVideoAppInfo.getInstance().setChannel(channel);
+         UMConfigure.init(getApplicationContext(), PackageHelper.getMetaData(this, BusinessConstants.MetaData.UMENG_APPKEY),
+                 channel, UMConfigure.DEVICE_TYPE_PHONE, null);
+         initAnalyticsData(channel);
+Index: app/src/main/java/cn/weli/svideo/module/task/presenter/TaskPagePresenter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/cn/weli/svideo/module/task/presenter/TaskPagePresenter.java	(revision 9053e3b15e553eb12b2adda643c5530041ced2c0)
++++ app/src/main/java/cn/weli/svideo/module/task/presenter/TaskPagePresenter.java	(date 1582792501000)
+@@ -161,6 +161,7 @@
+             @Override
+             public void onResponseSuccess(ArrayList<TaskBean> list) {
+                 if (list != null) {
++                    TaskBean.filterAd(list);
+                     mTaskList = list;
+                     mView.showTaskList(mTaskList);
+                     mTaskModel.saveLastTaskList(list);
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/build.gradle	(revision 9053e3b15e553eb12b2adda643c5530041ced2c0)
++++ app/build.gradle	(date 1582792611000)
+@@ -158,6 +158,7 @@
+                     GDT_APP_ID      : project.GDT_APP_ID
+             ]
+         }
++        huawei {}
+     }
+ 
+     //修改生成的apk名字
+Index: app/src/main/java/cn/weli/svideo/module/video/presenter/VideoPlayPresenter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/cn/weli/svideo/module/video/presenter/VideoPlayPresenter.java	(revision 9053e3b15e553eb12b2adda643c5530041ced2c0)
++++ app/src/main/java/cn/weli/svideo/module/video/presenter/VideoPlayPresenter.java	(date 1582792551000)
+@@ -105,6 +105,7 @@
+             if (list != null && !list.isEmpty()) {
+                 mCurrentPage++;
+                 hasMore = true;
++                VideoBean.filterAd(list);
+                 mView.handleVideoListRefresh(list);
+             } else {
+                 requestVideoList(true, false);
+@@ -191,6 +192,7 @@
+                     } else {
+                         hasMore = true;
+                         mCurrentPage++;
++                        VideoBean.filterAd(list);
+                         if (refresh) {
+                             mView.handleVideoListRefresh(list);
+                         } else {
+Index: app/src/main/java/cn/weli/svideo/module/main/ui/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/cn/weli/svideo/module/main/ui/MainActivity.java	(revision 9053e3b15e553eb12b2adda643c5530041ced2c0)
++++ app/src/main/java/cn/weli/svideo/module/main/ui/MainActivity.java	(date 1582792501000)
+@@ -120,7 +120,9 @@
+ 
+     @Subscribe
+     public void onLoginSuccess(LoginSuccessEvent event) {
+-        TaskCoinOpenHelper.getInstance().queryTaskCoinOpenStatus();
++        if (!WlVideoAppInfo.getInstance().isNeedFilterAd()) {
++            TaskCoinOpenHelper.getInstance().queryTaskCoinOpenStatus();
++        }
+     }
+ 
+     @Subscribe
+@@ -260,7 +262,9 @@
+      */
+     private void handleOtherAction() {
+         // 开宝箱状态
+-        TaskCoinOpenHelper.getInstance().queryTaskCoinOpenStatus();
++        if (!WlVideoAppInfo.getInstance().isNeedFilterAd()) {
++            TaskCoinOpenHelper.getInstance().queryTaskCoinOpenStatus();
++        }
+     }
+ 
+     /**
+Index: app/src/main/java/cn/weli/svideo/WlVideoAppInfo.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/cn/weli/svideo/WlVideoAppInfo.java	(revision 9053e3b15e553eb12b2adda643c5530041ced2c0)
++++ app/src/main/java/cn/weli/svideo/WlVideoAppInfo.java	(date 1582792551000)
+@@ -9,6 +9,7 @@
+ 
+ import cn.etouch.logger.Logger;
+ import cn.weli.svideo.advert.toutiao.TtAdManagerHolder;
++import cn.weli.svideo.baselib.utils.SharePrefUtil;
+ import cn.weli.svideo.baselib.utils.StringUtil;
+ import cn.weli.svideo.common.constant.HttpConstant;
+ import cn.weli.svideo.common.helper.ApiHelper;
+@@ -42,6 +43,15 @@
+ 
+     private boolean isAppRunning;
+ 
++    /**
++     * 是否过滤广告
++     */
++    private boolean isFilterAd = true;
++    /**
++     * 渠道
++     */
++    private String mChannel;
++
+     private UserInfoBean mUserInfoBean;
+ 
+     private List<VideoBean> mPreVideoList;
+@@ -64,6 +74,7 @@
+      */
+     public void init(WlVideoApplication application, Context applicationContext) {
+         sAppCtx = applicationContext;
++        isFilterAd = SharePrefUtil.getInfoFromPref("need_filter_ad", true);
+         application.registerActivityLifecycleCallbacks(new SwitchBackgroundCallbacks());
+         ApiHelper.setHasInitApi(false);
+         initUrls();
+@@ -103,6 +114,34 @@
+         return false;
+     }
+ 
++    /**
++     * 设置渠道
++     *
++     * @param channel 渠道
++     */
++    public void setChannel(String channel) {
++        mChannel = channel;
++    }
++
++    /**
++     * 是否需要过滤广告，这里判断客户端统一配置里的参数及当前渠道
++     *
++     * @return 过滤广告
++     */
++    public boolean isNeedFilterAd() {
++        return isFilterAd && StringUtil.equals("huawei", mChannel);
++    }
++
++    /**
++     * 客户端统一配置是否需要过滤广告
++     *
++     * @param filterAd 是否需要过滤广告
++     */
++    public void setFilterAd(boolean filterAd) {
++        isFilterAd = filterAd;
++        SharePrefUtil.saveInfoToPref("need_filter_ad", isFilterAd);
++    }
++
+     /**
+      * 获取预加载的视频列表
+      */
+Index: app/src/main/java/cn/weli/svideo/module/task/model/bean/TaskBean.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/cn/weli/svideo/module/task/model/bean/TaskBean.java	(revision 9053e3b15e553eb12b2adda643c5530041ced2c0)
++++ app/src/main/java/cn/weli/svideo/module/task/model/bean/TaskBean.java	(date 1582792501000)
+@@ -1,6 +1,11 @@
+ package cn.weli.svideo.module.task.model.bean;
+ 
+ import java.io.Serializable;
++import java.util.ArrayList;
++import java.util.List;
++
++import cn.weli.svideo.WlVideoAppInfo;
++import cn.weli.svideo.baselib.utils.StringUtil;
+ 
+ /**
+  * Function description
+@@ -31,4 +36,22 @@
+     public String icon;
+ 
+     public AdConfigBean ad_config;
++
++    public static void filterAd(List<TaskBean> list) {
++        if (list ==null || list.isEmpty()) {
++            return;
++        }
++        if (WlVideoAppInfo.getInstance().isNeedFilterAd()) {
++            List<TaskBean> removeList = new ArrayList<>();
++            for (TaskBean bean: list) {
++                if (StringUtil.equals(REWARD_VIDEO, bean.key)) {
++                    removeList.add(bean);
++                    break;
++                }
++            }
++            if (!removeList.isEmpty()) {
++                list.removeAll(removeList);
++            }
++        }
++    }
+ }
+Index: app/src/main/java/cn/weli/svideo/module/main/model/bean/ConfigBean.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/cn/weli/svideo/module/main/model/bean/ConfigBean.java	(revision 9053e3b15e553eb12b2adda643c5530041ced2c0)
++++ app/src/main/java/cn/weli/svideo/module/main/model/bean/ConfigBean.java	(date 1582792501000)
+@@ -39,6 +39,10 @@
+      * 文案配置
+      */
+     public DocumentBean document;
++    /**
++     * 是否过滤广告
++     */
++    public int filterAd;
+ 
+     public static class DocumentBean {
+         /**
+Index: app/src/main/java/cn/weli/svideo/module/task/component/widget/SignInDialog.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/cn/weli/svideo/module/task/component/widget/SignInDialog.java	(revision 9053e3b15e553eb12b2adda643c5530041ced2c0)
++++ app/src/main/java/cn/weli/svideo/module/task/component/widget/SignInDialog.java	(date 1582792501000)
+@@ -17,6 +17,7 @@
+ 
+ import cn.etouch.logger.Logger;
+ import cn.weli.svideo.R;
++import cn.weli.svideo.WlVideoAppInfo;
+ import cn.weli.svideo.baselib.utils.StringUtil;
+ import cn.weli.svideo.common.helper.FontHelper;
+ import cn.weli.svideo.module.task.model.bean.SignInBean;
+@@ -188,7 +189,9 @@
+             mSecondLayout.addView(view, lp);
+ 
+             mCoinTxt.setText(mContext.getString(R.string.task_sign_coin_title, String.valueOf(todayReward)));
+-
++            if (WlVideoAppInfo.getInstance().isNeedFilterAd()) {
++                bean.next_task = null;
++            }
+             if (bean.next_task != null && !StringUtil.isNull(bean.next_task.button)) {
+                 mActionTxt.setText(bean.next_task.button);
+                 mCloseImg.setVisibility(View.VISIBLE);
+Index: app/src/main/java/cn/weli/svideo/common/helper/ClientConfigHelper.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/cn/weli/svideo/common/helper/ClientConfigHelper.java	(revision 9053e3b15e553eb12b2adda643c5530041ced2c0)
++++ app/src/main/java/cn/weli/svideo/common/helper/ClientConfigHelper.java	(date 1582792501000)
+@@ -151,6 +151,7 @@
+                 if (!StringUtil.isNull(bean.liYueVideoId)) {
+                     ConfigConstants.LI_YUE_VIDEO_ID = bean.liYueVideoId;
+                 }
++                WlVideoAppInfo.getInstance().setFilterAd(bean.filterAd == 1);
+                 if (bean.document != null) {
+                     ConfigConstants.PROFIT_DESC = StringUtil.isNull(bean.document.profitDesc)
+                             ? WlVideoAppInfo.sAppCtx.getString(R.string.profit_detail_title) : bean.document.profitDesc;

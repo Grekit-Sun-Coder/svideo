@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/jinbi_00"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_01"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_02"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_03"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_04"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_05"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_06"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_07"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_08"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_09"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_10"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_11"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_12"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_13"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_14"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_15"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_16"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_17"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_18"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_19"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_20"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_21"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_22"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_23"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_24"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_25"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_26"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_27"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_28"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_29"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_30"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_31"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_32"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_33"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_34"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_35"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_36"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_37"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_38"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_39"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_40"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_41"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_42"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_43"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/jinbi_44"
+        android:duration="33" />
+</animation-list>

@@ -1,0 +1,7 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.weli.svideo.baselib">
+
+    <meta-data
+        android:name="cn.weli.svideo.baselib.helper.glide.config.GlideModuleConfig"
+        android:value="GlideModule" />
+</manifest>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_white_20"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="@dimen/common_len_44px"
+        android:paddingBottom="@dimen/common_len_40px"
+        android:text="@string/share_how_title"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/common_text_size_40px"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/close_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:padding="@dimen/common_len_20px"
+        android:src="@drawable/icon_close" />
+
+    <TextView
+        android:id="@+id/content_txy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_txt"
+        android:lineSpacingExtra="@dimen/common_len_10px"
+        android:paddingLeft="@dimen/common_len_60px"
+        android:paddingRight="@dimen/common_len_60px"
+        android:text="@string/share_detail_title"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/common_text_size_32px" />
+
+    <ImageView
+        android:id="@+id/content_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/content_txy"
+        android:layout_marginTop="@dimen/common_len_36px"
+        android:paddingLeft="@dimen/common_len_60px"
+        android:paddingRight="@dimen/common_len_60px"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_zhantie" />
+
+    <TextView
+        android:id="@+id/action_txt"
+        android:layout_width="@dimen/common_len_360px"
+        android:layout_height="@dimen/common_len_100px"
+        android:layout_below="@id/content_img"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/common_len_60px"
+        android:layout_marginBottom="@dimen/common_len_60px"
+        android:background="@drawable/shape_login_btn"
+        android:gravity="center"
+        android:text="@string/share_action_title"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/common_text_size_36px"
+        android:textStyle="bold" />
+</RelativeLayout>

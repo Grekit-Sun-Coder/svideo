@@ -1,0 +1,284 @@
+apply plugin: 'com.android.application'
+apply plugin: 'walle'
+
+def createTime = new Date().format("YYYY-MM-dd", TimeZone.getTimeZone("GMT+08:00"))
+
+android {
+    compileSdkVersion Integer.parseInt(project.ANDROID_BUILD_SDK_VERSION)
+    buildToolsVersion project.ANDROID_BUILD_TOOLS_VERSION
+
+    dexOptions {
+        jumboMode true
+    }
+
+    defaultConfig {
+        //方法数超过 65535(google官方方案)
+        multiDexEnabled true
+        renderscriptSupportModeEnabled true
+        renderscriptTargetApi Integer.parseInt(ANDROID_BUILD_TARGET_SDK_VERSION)
+
+        applicationId "cn.weli.svideo"
+        minSdkVersion ANDROID_BUILD_MIN_SDK_VERSION
+        targetSdkVersion ANDROID_BUILD_TARGET_SDK_VERSION
+        versionCode Integer.parseInt(VERSION_CODE)
+        versionName VERSION_NAME
+        flavorDimensions "versionCode"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+
+        defaultConfig {
+            resConfigs "zh", "en"
+        }
+
+        ndk {
+            abiFilters "armeabi-v7a"
+        }
+    }
+
+    signingConfigs { release }
+
+    buildTypes {
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "boolean", "STATISTICS_DEBUG", "false"
+            signingConfig signingConfigs.debug
+        }
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            buildConfigField "boolean", "STATISTICS_DEBUG", "false"
+            //混淆开关
+            minifyEnabled true
+            //是否zip对齐
+            zipAlignEnabled true
+            //是否打开debuggable开关
+            debuggable false
+            //是否打开jniDebuggable开关
+            jniDebuggable false
+            // 移除无用的resource文件
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    productFlavors.all {
+        flavor ->
+            if (!(name.equals("WlVideoTest") || name.equals("WlVideoProduct"))) {
+                buildConfigField "boolean", "URL_DEBUG", "false"
+                flavor.manifestPlaceholders = [
+                        APP_KEY         : APP_KEY,
+                        APP_SECRET      : APP_SECRET,
+                        PACKAGE_NAME    : PACKAGE_NAME,
+                        CHANNEL_NAME    : name,
+                        GAO_DE_APP_KEY  : GAO_DE_APP_KEY_RELEASE,
+                        UCLOUCD_APP_KEY : UCLOUCD_APP_KEY,
+                        LINKEDME_KEY    : LINKEDME_KEY,
+                        UM_APP_ID       : UM_APP_ID_RELEASE,
+                        GETUI_APP_ID    : GETUI_APP_ID_RELEASE,
+                        GETUI_APP_KEY   : GETUI_APP_KEY_RELEASE,
+                        GETUI_APP_SECRET: GETUI_APP_SECRET_RELEASE,
+                        OPPO_APP_KEY    : GETUI_OPPO_APP_KEY,
+                        OPPO_APP_SECRET : GETUI_OPPO_APP_SECRET,
+                        HUAWEI_APP_ID   : GETTUI_HUAWEI_APP_ID,
+                        VIVO_APP_ID     : GETTUI_VIVO_APP_ID,
+                        VIVO_APP_KEY    : GETTUI_VIVO_APP_KEY,
+                        XIAOMI_APP_ID   : GETTUI_XIAOMI_APP_ID,
+                        XIAOMI_APP_KEY  : GETTUI_XIAOMI_APP_KEY,
+                        USER_PRIVACY    : USER_PRIVACY_LIST,
+                        WX_APP_ID       : WX_APP_ID,
+                        WX_APP_SECRET   : WX_APP_SECRET,
+                        QQ_APP_ID       : QQ_APP_ID,
+                        QQ_APP_KEY      : QQ_APP_KEY,
+                        BAIDU_APP_ID    : BAIDU_APP_ID,
+                        GDT_APP_ID      : GDT_APP_ID
+                ]
+            }
+    }
+
+    productFlavors {
+        WlvideoTest {
+            buildConfigField "boolean", "URL_DEBUG", "true"
+            manifestPlaceholders = [
+                    APP_KEY         : project.APP_KEY,
+                    APP_SECRET      : project.APP_SECRET,
+                    PACKAGE_NAME    : project.PACKAGE_NAME,
+                    CHANNEL_NAME    : project.CHANNEL_NAME,
+                    GAO_DE_APP_KEY  : project.GAO_DE_APP_KEY_TEST,
+                    UCLOUCD_APP_KEY : project.UCLOUCD_APP_KEY,
+                    LINKEDME_KEY    : project.LINKEDME_KEY,
+                    UM_APP_ID       : project.UM_APP_ID_TEST,
+                    GETUI_APP_ID    : project.GETUI_APP_ID_TEST,
+                    GETUI_APP_KEY   : project.GETUI_APP_KEY_TEST,
+                    GETUI_APP_SECRET: project.GETUI_APP_SECRET_TEST,
+                    OPPO_APP_KEY    : project.GETUI_OPPO_APP_KEY,
+                    OPPO_APP_SECRET : project.GETUI_OPPO_APP_SECRET,
+                    XIAOMI_APP_ID   : project.GETTUI_XIAOMI_APP_ID,
+                    XIAOMI_APP_KEY  : project.GETTUI_XIAOMI_APP_KEY,
+                    HUAWEI_APP_ID   : project.GETTUI_HUAWEI_APP_ID,
+                    VIVO_APP_ID     : project.GETTUI_VIVO_APP_ID,
+                    VIVO_APP_KEY    : project.GETTUI_VIVO_APP_KEY,
+                    USER_PRIVACY    : project.USER_PRIVACY_LIST,
+                    WX_APP_ID       : project.WX_APP_ID,
+                    WX_APP_SECRET   : project.WX_APP_SECRET,
+                    QQ_APP_ID       : project.QQ_APP_ID,
+                    QQ_APP_KEY      : project.QQ_APP_KEY,
+                    BAIDU_APP_ID    : project.BAIDU_APP_ID,
+                    GDT_APP_ID      : project.GDT_APP_ID
+            ]
+        }
+
+        WlvideoProduct {
+            buildConfigField "boolean", "URL_DEBUG", "false"
+            manifestPlaceholders = [
+                    APP_KEY         : project.APP_KEY,
+                    APP_SECRET      : project.APP_SECRET,
+                    PACKAGE_NAME    : project.PACKAGE_NAME,
+                    CHANNEL_NAME    : project.CHANNEL_NAME,
+                    GAO_DE_APP_KEY  : project.GAO_DE_APP_KEY_RELEASE,
+                    UCLOUCD_APP_KEY : project.UCLOUCD_APP_KEY,
+                    LINKEDME_KEY    : project.LINKEDME_KEY,
+                    UM_APP_ID       : project.UM_APP_ID_RELEASE,
+                    GETUI_APP_ID    : project.GETUI_APP_ID_RELEASE,
+                    GETUI_APP_KEY   : project.GETUI_APP_KEY_RELEASE,
+                    GETUI_APP_SECRET: project.GETUI_APP_SECRET_RELEASE,
+                    OPPO_APP_KEY    : project.GETUI_OPPO_APP_KEY,
+                    OPPO_APP_SECRET : project.GETUI_OPPO_APP_SECRET,
+                    HUAWEI_APP_ID   : project.GETTUI_HUAWEI_APP_ID,
+                    VIVO_APP_ID     : project.GETTUI_VIVO_APP_ID,
+                    VIVO_APP_KEY    : project.GETTUI_VIVO_APP_KEY,
+                    XIAOMI_APP_ID   : project.GETTUI_XIAOMI_APP_ID,
+                    XIAOMI_APP_KEY  : project.GETTUI_XIAOMI_APP_KEY,
+                    USER_PRIVACY    : project.USER_PRIVACY_LIST,
+                    WX_APP_ID       : project.WX_APP_ID,
+                    WX_APP_SECRET   : project.WX_APP_SECRET,
+                    QQ_APP_ID       : project.QQ_APP_ID,
+                    QQ_APP_KEY      : project.QQ_APP_KEY,
+                    BAIDU_APP_ID    : project.BAIDU_APP_ID,
+                    GDT_APP_ID      : project.GDT_APP_ID
+            ]
+        }
+    }
+
+    //修改生成的apk名字
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def buildName = ''
+            def ApkName
+            def outputFile = output.outputFile
+            variant.productFlavors.each { product ->
+                buildName = product.name
+            }
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                ApkName = buildName + "_v${defaultConfig.versionName}"
+                if (variant.buildType.name == 'debug') {
+                    ApkName = ApkName + '.' + createTime + '_debug.apk'
+                } else if (variant.buildType.name == 'release') {
+                    ApkName = ApkName + '_release.apk'
+                }
+                outputFileName = ApkName
+            }
+        }
+    }
+
+    lintOptions {
+        disable 'InvalidPackage'
+        abortOnError false
+    }
+
+    packagingOptions {
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/rxjava.properties'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex") && !requested.name.startsWith("constraint")) {
+                details.useVersion project.ANDROID_SUPPORT_LIB_VERSION
+            }
+        }
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.aar'])
+    implementation project(path: ':baselib')
+    implementation "com.android.support:percent:${project.ANDROID_SUPPORT_LIB_VERSION}"
+    implementation "com.android.support:appcompat-v7:${project.ANDROID_SUPPORT_LIB_VERSION}"
+    implementation "com.android.support:recyclerview-v7:${project.ANDROID_SUPPORT_LIB_VERSION}"
+    implementation "com.android.support:cardview-v7:${project.ANDROID_SUPPORT_LIB_VERSION}"
+    implementation "com.android.support:design:${project.ANDROID_SUPPORT_LIB_VERSION}"
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    // Leakcanary
+    debugImplementation "com.squareup.leakcanary:leakcanary-android:${project.LEAKCANARY_VERSION_CODE}"
+    releaseImplementation "com.squareup.leakcanary:leakcanary-android-no-op:${project.LEAKCANARY_VERSION_CODE}"
+    // Butterknife
+    api "com.jakewharton:butterknife:${project.BUTTERKNIFE_VERSION_CODE}"
+    annotationProcessor "com.jakewharton:butterknife-compiler:${project.BUTTERKNIFE_VERSION_CODE}"
+    // 方法数超过 65535(google官方方案)
+    implementation "com.android.support:multidex:${project.MULTIDEX_VERSION_CODE}"
+    // 多渠道打包(美团Walle)
+    implementation 'com.meituan.android.walle:library:1.1.6'
+    // 友盟
+    implementation 'com.umeng.umsdk:analytics:8.1.3'
+    implementation 'com.umeng.umsdk:common:2.0.0'
+    // 高德定位
+    implementation 'com.amap.api:location:4.7.2'
+    // 个推
+    implementation 'com.getui:sdk:2.13.3.0'
+    implementation 'com.assist:vivo:1.0.3'
+    implementation 'com.assist:oppo:1.0.3'
+    implementation 'com.getui:hwp:1.0.3'
+    implementation 'com.getui:xmp:1.0.4'
+    // 动画库
+    implementation 'com.airbnb.android:lottie:2.7.0'
+    // 微信
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:5.1.4'
+    // 又拍云上传
+    implementation 'com.upyun:upyun-android-sdk:2.1.2'
+}
+
+walle {
+    // 指定渠道包的输出路径
+    apkOutputFolder = new File("${project.buildDir}/outputs/channels");
+    // 定制渠道包的APK的文件名称
+    apkFileNameFormat = 'wlvideo_${channel}_v${versionName}.apk';
+    // 渠道配置文件
+    channelFile = new File("${project.getProjectDir()}/channel")
+}
+
+File propFile = file('signing.properties')
+if (propFile.exists()) {
+    Properties props = new Properties()
+    props.load(new FileInputStream(propFile))
+
+    if (props.containsKey('STORE_FILE') && props.containsKey('STORE_PASSWORD') &&
+            props.containsKey('KEY_ALIAS') && props.containsKey('KEY_PASSWORD')) {
+        android.signingConfigs.release.storeFile = file(props['STORE_FILE'])
+        android.signingConfigs.release.storePassword = props['STORE_PASSWORD']
+        android.signingConfigs.release.keyAlias = props['KEY_ALIAS']
+        android.signingConfigs.release.keyPassword = props['KEY_PASSWORD']
+    } else {
+        android.buildTypes.release.signingConfig = null
+    }
+} else {
+    android.buildTypes.release.signingConfig = null
+}

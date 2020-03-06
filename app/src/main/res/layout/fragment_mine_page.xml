@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mine_parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/mine_bg_img"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_len_460px"
+        android:scaleType="fitXY"
+        android:src="@drawable/my_img_bg" />
+
+    <cn.weli.svideo.baselib.component.widget.smartrefresh.WeRefreshLayout
+        android:id="@+id/mine_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlEnableLoadMore="false"
+        app:srlEnableOverScrollDrag="true"
+        app:srlEnableRefresh="false">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/mine_coordinator_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/mine_appbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_transparent"
+                app:elevation="0dp"
+                app:layout_behavior="cn.weli.svideo.common.widget.WeAppBarBehavior">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_scrollFlags="scroll">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/common_len_130px"
+                        android:layout_marginTop="@dimen/common_len_180px"
+                        android:background="@drawable/shape_mine_top_bg" />
+
+                    <cn.weli.svideo.baselib.component.widget.roundimageview.RoundedImageView
+                        android:id="@+id/mine_head_img"
+                        android:layout_width="@dimen/common_len_140px"
+                        android:layout_height="@dimen/common_len_140px"
+                        android:layout_marginStart="@dimen/common_len_30px"
+                        android:layout_marginLeft="@dimen/common_len_30px"
+                        android:layout_marginTop="@dimen/common_len_140px"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/logo"
+                        app:riv_border_color="@color/color_14181B"
+                        app:riv_border_width="@dimen/common_len_4px"
+                        app:riv_oval="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_14181B"
+                    app:layout_collapseMode="pin"
+                    app:layout_scrollFlags="exitUntilCollapsed|enterAlways|enterAlwaysCollapsed">
+
+                    <TextView
+                        android:id="@+id/mine_nickname_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/common_len_30px"
+                        android:layout_marginLeft="@dimen/common_len_30px"
+                        android:layout_marginBottom="@dimen/common_len_20px"
+                        android:textColor="@color/color_E7E7E7"
+                        android:textSize="@dimen/common_text_size_44px"
+                        tools:text="一条咸鱼" />
+
+                    <TextView
+                        android:id="@+id/mine_in_blacklist_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/common_len_10px"
+                        android:layout_marginTop="@dimen/common_len_2px"
+                        android:layout_toEndOf="@+id/mine_nickname_txt"
+                        android:background="@drawable/shape_illegal_account"
+                        android:drawableStart="@drawable/my_icon_jinggao"
+                        android:drawablePadding="@dimen/common_len_8px"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/common_len_10px"
+                        android:paddingTop="@dimen/common_len_7px"
+                        android:paddingEnd="@dimen/common_len_10px"
+                        android:paddingBottom="@dimen/common_len_7px"
+                        android:text="@string/mine_illegal_account"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/common_len_26px" />
+
+                    <TextView
+                        android:id="@+id/mine_join_time_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/mine_nickname_txt"
+                        android:layout_marginStart="@dimen/common_len_30px"
+                        android:layout_marginLeft="@dimen/common_len_30px"
+                        android:textColor="@color/color_888888"
+                        android:textSize="@dimen/common_text_size_28px"
+                        tools:text="2019.11.06加入" />
+
+                    <ImageView
+                        android:id="@+id/mine_setting_img"
+                        android:layout_width="@dimen/common_len_100px"
+                        android:layout_height="@dimen/common_len_100px"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="@dimen/common_len_10px"
+                        android:layout_marginRight="@dimen/common_len_10px"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:padding="@dimen/common_len_10px"
+                        android:src="@drawable/my_icon_setting" />
+
+                    <ImageView
+                        android:id="@+id/mine_ms_img"
+                        android:layout_width="@dimen/common_len_100px"
+                        android:layout_height="@dimen/common_len_100px"
+                        android:layout_toStartOf="@id/mine_setting_img"
+                        android:layout_toLeftOf="@id/mine_setting_img"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:padding="@dimen/common_len_10px"
+                        android:src="@drawable/my_icon_xiaoxi" />
+
+                    <View
+                        android:id="@+id/mine_ms_point_img"
+                        android:layout_width="@dimen/common_len_16px"
+                        android:layout_height="@dimen/common_len_16px"
+                        android:layout_alignTop="@id/mine_ms_img"
+                        android:layout_alignRight="@id/mine_ms_img"
+                        android:layout_margin="@dimen/common_len_16px"
+                        android:background="@drawable/shape_msg_point_bg"
+                        android:visibility="gone"
+                        tools:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/mine_video_title_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/mine_join_time_txt"
+                        android:layout_marginTop="@dimen/common_len_35px"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:paddingTop="@dimen/common_len_25px"
+                        android:paddingBottom="@dimen/common_len_25px"
+                        android:text="@string/mine_collect_video_title"
+                        android:textColor="@color/color_E7E7E7"
+                        android:textSize="@dimen/common_text_size_36px" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/mine_video_title_txt"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/common_len_44px"
+                        android:src="@drawable/my_img_line" />
+
+                </RelativeLayout>
+
+            </android.support.design.widget.AppBarLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/mine_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_14181B"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        </android.support.design.widget.CoordinatorLayout>
+
+    </cn.weli.svideo.baselib.component.widget.smartrefresh.WeRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/mine_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_14181B">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_len_88px"
+            android:gravity="center"
+            android:text="@string/mine_title"
+            android:textColor="@color/color_E7E7E7"
+            android:textSize="@dimen/common_text_size_36px" />
+    </RelativeLayout>
+</RelativeLayout>

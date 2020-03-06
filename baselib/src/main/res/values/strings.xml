@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">baselib</string>
+
+    <string name="common_str_ok">确定</string>
+    <string name="common_str_cancel">取消</string>
+    <string name="common_dialog_title">提示信息</string>
+    <string name="common_str_know">知道了</string>
+    <string name="common_str_yuan">元</string>
+    <string name="common_str_coin">金币</string>
+    <string name="common_str_plus">+</string>
+    <string name="common_str_minus">-</string>
+    <string name="common_str_and">和</string>
+    <string name="common_str_network_unavailable">网络不可用，请稍后再试</string>
+    <string name="common_str_network_error">系统开小差了，请稍后重试</string>
+    <string name="no_more_data">没有更多了</string>
+    <string name="pull_to_refresh_pull_label_down">下拉刷新</string>
+    <string name="pull_to_refresh_pull_label_up">下拉加载更多</string>
+    <string name="pull_to_refresh_release_down">松开刷新</string>
+    <string name="pull_to_refresh_release_up">松开加载</string>
+    <string name="pull_to_refresh_refreshing_label">刷新中</string>
+    <string name="pull_to_refresh_finish_label">刷新完成</string>
+    <string name="pull_to_refresh_load_more_label">努力加载中...</string>
+</resources>

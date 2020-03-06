@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.weli.svideo.module.video.component.widget.videoheart.HeartRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/video_heart_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:heart_degrees_interval_max="20"
+    app:heart_degrees_interval_min="-20"
+    app:heart_swipe_image="@drawable/video_icon_like_shuangji">
+
+    <cn.weli.svideo.module.video.component.widget.VideoPlayView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:useTextureViewBacking="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/common_len_40px">
+
+        <TextView
+            android:id="@+id/video_title_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_len_30px"
+            android:layout_marginLeft="@dimen/common_len_30px"
+            android:layout_weight="1"
+            android:lineSpacingExtra="@dimen/common_len_8px"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/common_text_size_34px"
+            android:textStyle="bold"
+            tools:text="他曾三次向董卿求婚被拒，如今却变成这样，你怎么看？" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/video_praise_layout"
+                android:layout_width="@dimen/common_len_118px"
+                android:layout_height="@dimen/common_len_118px"
+                android:layout_centerHorizontal="true"
+                android:layout_above="@id/video_praise_txt"
+                android:layout_marginBottom="@dimen/common_mar_pad_len__20px">
+
+                <ImageView
+                    android:id="@+id/video_praise_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/home_icon_dianzan_normal" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/video_praise_anim_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"
+                    app:lottie_fileName="praise.json"
+                    app:lottie_imageAssetsFolder="images" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/video_praise_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/common_len_40px"
+                android:minWidth="@dimen/common_len_170px"
+                android:text="@string/video_like_title"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/common_text_size_26px" />
+
+            <TextView
+                android:id="@+id/video_share_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/home_icon_share"
+                android:drawablePadding="@dimen/common_len_10px"
+                android:gravity="center"
+                android:minWidth="@dimen/common_len_144px"
+                android:text="@string/share_title"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/common_text_size_26px" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</cn.weli.svideo.module.video.component.widget.videoheart.HeartRelativeLayout>

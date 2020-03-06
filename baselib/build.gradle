@@ -1,0 +1,74 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion Integer.parseInt(project.ANDROID_BUILD_SDK_VERSION)
+    buildToolsVersion project.ANDROID_BUILD_TOOLS_VERSION
+    defaultConfig {
+        minSdkVersion project.ANDROID_BUILD_MIN_SDK_VERSION
+        targetSdkVersion project.ANDROID_BUILD_TARGET_SDK_VERSION
+        versionCode Integer.parseInt(project.VERSION_CODE)
+        versionName project.VERSION_NAME
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters "armeabi-v7a"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex") && !requested.name.startsWith("constraint")) {
+                details.useVersion project.ANDROID_SUPPORT_LIB_VERSION
+            }
+        }
+    }
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+
+    //Android support包依赖
+    api "com.android.support:percent:${project.ANDROID_SUPPORT_LIB_VERSION}"
+    api "com.android.support:appcompat-v7:${project.ANDROID_SUPPORT_LIB_VERSION}"
+    api "com.android.support:recyclerview-v7:${project.ANDROID_SUPPORT_LIB_VERSION}"
+    api "com.android.support:cardview-v7:${project.ANDROID_SUPPORT_LIB_VERSION}"
+    api "com.android.support:design:${project.ANDROID_SUPPORT_LIB_VERSION}"
+    api 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    // Glide
+    api "com.github.bumptech.glide:glide:${project.GLIDE_VERSION_CODE}"
+    annotationProcessor "com.github.bumptech.glide:compiler:${project.GLIDE_VERSION_CODE}"
+    // gson
+    api "com.google.code.gson:gson:${project.GSON_VERSION_CODE}"
+    // retrofit2 + rxjava2
+    api 'com.squareup.retrofit2:retrofit:2.4.0'
+    api 'com.squareup.retrofit2:converter-gson:2.4.0'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    api 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    api 'io.reactivex.rxjava2:rxjava:2.2.3'
+    // Rxbus事件总线
+    api 'com.hwangjr.rxbus:rxbus:2.0.1'
+    // Permission
+    api 'com.yanzhenjie:permission:2.0.0-rc4'
+    // 下拉刷新
+    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-14'
+    // tab
+    api 'com.github.hackware1993:MagicIndicator:1.6.0'
+    // maven 私库
+    api 'cn.etouch.android:statusbar:1.0.0'
+    api 'cn.etouch.android:logger:1.0.0'
+    api 'cn.etouch.android:retrofit:1.0.1'
+    api 'cn.etouch.android:cache:1.0.0'
+}

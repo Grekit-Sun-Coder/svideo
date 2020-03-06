@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/coin_open_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/common_len_200px"
+    android:paddingLeft="@dimen/common_len_10px"
+    android:paddingRight="@dimen/common_len_10px"
+    android:paddingTop="@dimen/common_len_30px"
+    android:paddingBottom="@dimen/common_len_30px">
+
+    <ImageView
+        android:layout_width="@dimen/common_len_160px"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/money_icon_baoxiang" />
+
+    <TextView
+        android:id="@+id/coin_open_txt"
+        android:layout_width="@dimen/common_len_160px"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/money_img_timebg"
+        android:text="@string/task_open_coin_title"
+        android:gravity="center"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/common_text_size_26px"/>
+</RelativeLayout>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_common_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/wx_bind_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/common_len_30px"
+                android:paddingRight="@dimen/common_len_30px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/money_icon_wechat"
+                    android:drawablePadding="@dimen/common_len_20px"
+                    android:paddingTop="@dimen/common_len_40px"
+                    android:paddingBottom="@dimen/common_len_40px"
+                    android:text="@string/wx_bind_title"
+                    android:textColor="@color/color_E7E7E7"
+                    android:textSize="@dimen/common_text_size_36px" />
+
+                <TextView
+                    android:id="@+id/wx_bind_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:drawableRight="@drawable/icon_jinru"
+                    android:gravity="right|center_vertical"
+                    android:hint=""
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/common_len_200px"
+                    android:paddingTop="@dimen/common_len_40px"
+                    android:paddingBottom="@dimen/common_len_40px"
+                    android:singleLine="true"
+                    android:text="@string/wx_go_bind_title"
+                    android:textColor="@color/color_888888"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/common_text_size_36px" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common_len_1px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/color_10_white" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ali_bind_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/common_len_30px"
+                android:paddingRight="@dimen/common_len_30px">
+
+                <TextView
+                    android:layout_width="@dimen/common_len_200px"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/money_icon_zhifubao"
+                    android:drawablePadding="@dimen/common_len_20px"
+                    android:paddingTop="@dimen/common_len_40px"
+                    android:paddingBottom="@dimen/common_len_40px"
+                    android:text="@string/ali_bind_account_title"
+                    android:textColor="@color/color_E7E7E7"
+                    android:textSize="@dimen/common_text_size_36px" />
+
+                <EditText
+                    android:id="@+id/bind_account_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:hint="@string/ali_bind_account_input_title"
+                    android:maxLines="1"
+                    android:paddingTop="@dimen/common_len_40px"
+                    android:paddingBottom="@dimen/common_len_40px"
+                    android:singleLine="true"
+                    android:textColor="@color/color_E7E7E7"
+                    android:textColorHint="@color/color_888888"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/common_text_size_36px" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_len_1px"
+                android:layout_marginStart="@dimen/common_len_30px"
+                android:layout_marginLeft="@dimen/common_len_30px"
+                android:background="@color/color_10_white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/common_len_30px"
+                android:paddingRight="@dimen/common_len_30px">
+
+                <TextView
+                    android:layout_width="@dimen/common_len_160px"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/common_len_40px"
+                    android:paddingBottom="@dimen/common_len_40px"
+                    android:text="@string/ali_bind_name_title"
+                    android:textColor="@color/color_E7E7E7"
+                    android:textSize="@dimen/common_text_size_36px" />
+
+                <EditText
+                    android:id="@+id/bind_name_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:hint="@string/ali_bind_name_input_title"
+                    android:maxLines="1"
+                    android:paddingTop="@dimen/common_len_40px"
+                    android:paddingBottom="@dimen/common_len_40px"
+                    android:singleLine="true"
+                    android:textColor="@color/color_E7E7E7"
+                    android:textColorHint="@color/color_888888"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/common_text_size_36px" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_len_1px"
+                android:layout_marginStart="@dimen/common_len_30px"
+                android:layout_marginLeft="@dimen/common_len_30px"
+                android:background="@color/color_10_white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/common_len_30px"
+                android:paddingRight="@dimen/common_len_30px">
+
+                <TextView
+                    android:layout_width="@dimen/common_len_160px"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/common_len_40px"
+                    android:paddingBottom="@dimen/common_len_40px"
+                    android:text="@string/ali_bind_id_title"
+                    android:textColor="@color/color_E7E7E7"
+                    android:textSize="@dimen/common_text_size_36px" />
+
+                <EditText
+                    android:id="@+id/bind_id_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:hint="@string/ali_bind_id_input_title"
+                    android:maxLines="1"
+                    android:paddingTop="@dimen/common_len_40px"
+                    android:paddingBottom="@dimen/common_len_40px"
+                    android:singleLine="true"
+                    android:textColor="@color/color_E7E7E7"
+                    android:textColorHint="@color/color_888888"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/common_text_size_36px" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_len_1px"
+                android:layout_marginStart="@dimen/common_len_30px"
+                android:layout_marginLeft="@dimen/common_len_30px"
+                android:background="@color/color_10_white" />
+
+            <TextView
+                android:id="@+id/withdraw_tip_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/common_len_30px"
+                android:text="@string/ali_bind_input_title"
+                android:textColor="@color/color_888888"
+                android:textSize="@dimen/common_text_size_28px" />
+
+            <TextView
+                android:id="@+id/withdraw_action_txt"
+                android:layout_width="@dimen/common_len_360px"
+                android:layout_height="@dimen/common_len_100px"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/common_len_50px"
+                android:background="@drawable/shape_login_btn"
+                android:gravity="center"
+                android:text="@string/ali_bind_input_complete_title"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/common_text_size_36px"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bind_desc_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_len_80px"
+                android:paddingLeft="@dimen/common_len_30px"
+                android:paddingRight="@dimen/common_len_30px"
+                android:text="@string/ali_bind_info_title"
+                android:textColor="@color/color_888888"
+                android:textSize="@dimen/common_text_size_32px" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

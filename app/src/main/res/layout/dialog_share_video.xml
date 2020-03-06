@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/common_len_40px"
+    android:background="@drawable/shape_white_20"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/common_len_35px"
+        android:paddingRight="@dimen/common_len_35px">
+
+            <TextView
+                android:id="@+id/video_share_wx_txt"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:drawableTop="@drawable/video_share_icon_weixin"
+                android:drawablePadding="@dimen/common_len_10px"
+                android:gravity="center_horizontal"
+                android:paddingTop="@dimen/common_len_40px"
+                android:paddingBottom="@dimen/common_len_30px"
+                android:text="@string/share_wx_title"
+                android:textSize="@dimen/common_len_28px"
+                android:layout_weight="1"
+                android:foreground="?android:attr/selectableItemBackground" />
+
+            <TextView
+                android:id="@+id/video_share_pyq_txt"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:drawableTop="@drawable/video_share_icon_pengyouquan"
+                android:drawablePadding="@dimen/common_len_10px"
+                android:gravity="center_horizontal"
+                android:paddingTop="@dimen/common_len_40px"
+                android:paddingBottom="@dimen/common_len_30px"
+                android:text="@string/share_pyq_title"
+                android:textSize="@dimen/common_len_28px"
+                android:layout_weight="1"
+                android:foreground="?android:attr/selectableItemBackground" />
+
+            <TextView
+                android:id="@+id/video_share_qq_txt"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:drawableTop="@drawable/video_share_icon_qq"
+                android:drawablePadding="@dimen/common_len_10px"
+                android:gravity="center_horizontal"
+                android:paddingTop="@dimen/common_len_40px"
+                android:paddingBottom="@dimen/common_len_30px"
+                android:text="@string/share_qq_title"
+                android:textSize="@dimen/common_len_28px"
+                android:layout_weight="1"
+                android:foreground="?android:attr/selectableItemBackground" />
+
+            <TextView
+                android:id="@+id/video_share_link_url_txt"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:drawableTop="@drawable/video_share_icon_lianjie"
+                android:drawablePadding="@dimen/common_len_10px"
+                android:gravity="center_horizontal"
+                android:paddingTop="@dimen/common_len_40px"
+                android:paddingBottom="@dimen/common_len_30px"
+                android:text="@string/share_copy_url_title"
+                android:textSize="@dimen/common_len_28px"
+                android:layout_weight="1"
+                android:foreground="?android:attr/selectableItemBackground" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_len_1px"
+        android:layout_marginLeft="@dimen/common_len_45px"
+        android:layout_marginRight="@dimen/common_len_45px"
+        android:background="@color/color_EAEAEA" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/common_len_35px"
+        android:paddingRight="@dimen/common_len_35px">
+
+            <TextView
+                android:id="@+id/video_share_report_txt"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:drawableTop="@drawable/video_icon_jubao"
+                android:drawablePadding="@dimen/common_len_10px"
+                android:gravity="center_horizontal"
+                android:paddingTop="@dimen/common_len_30px"
+                android:paddingBottom="@dimen/common_len_30px"
+                android:text="@string/share_report_title"
+                android:textSize="@dimen/common_len_28px"
+                android:layout_weight="1"
+                android:foreground="?android:attr/selectableItemBackground" />
+
+        <TextView
+            android:id="@+id/video_share_not_interested_txt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/video_icon_buganxingqu"
+            android:drawablePadding="@dimen/common_len_10px"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/common_len_30px"
+            android:paddingBottom="@dimen/common_len_30px"
+            android:text="@string/share_not_interested_title"
+            android:textSize="@dimen/common_len_28px" />
+
+        <!--预留位置-->
+        <RelativeLayout
+            android:id="@+id/share_other_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_len_1px"
+        android:background="@color/color_EAEAEA" />
+
+    <TextView
+        android:id="@+id/video_share_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_len_98px"
+        android:gravity="center"
+        android:text="@string/share_cancel"
+        android:textColor="@color/color_888888"
+        android:textSize="@dimen/common_text_size_36px"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:textStyle="bold" />
+</LinearLayout>

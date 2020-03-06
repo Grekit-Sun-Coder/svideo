@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_black"
+    android:orientation="vertical">
+
+    <cn.weli.svideo.baselib.component.widget.smartrefresh.WeRefreshRecyclerView
+        android:id="@+id/video_play_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/home_img_mask_top" />
+
+    <ImageView
+        android:id="@+id/video_bottom_cover_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/common_mar_pad_len__2px"
+        android:layout_marginRight="@dimen/common_mar_pad_len__2px"
+        android:scaleType="fitXY"
+        android:src="@drawable/home_img_mask"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/common_len_400px">
+
+        <LinearLayout
+            android:id="@+id/video_task_tip_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:gravity="right|end"
+            android:orientation="vertical"
+            android:visibility="invisible"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/video_task_tip_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/common_len_16px"
+                android:layout_marginRight="@dimen/common_len_16px"
+                android:background="@drawable/shape_video_task_tip_bg"
+                android:paddingLeft="@dimen/common_len_20px"
+                android:paddingTop="@dimen/common_len_16px"
+                android:paddingRight="@dimen/common_len_20px"
+                android:paddingBottom="@dimen/common_len_16px"
+                android:text="点我领金币"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/common_text_size_28px" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/common_len_75px"
+                android:src="@drawable/img_jiantou" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/video_task_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/video_task_tip_layout"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="@dimen/common_len_10px"
+            android:layout_marginRight="@dimen/common_len_10px"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <cn.weli.svideo.module.video.component.widget.RotateImageView
+                android:id="@+id/video_task_bg_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/home_img_jinbi_bg" />
+
+            <View
+                android:layout_width="@dimen/common_len_110px"
+                android:layout_height="@dimen/common_len_110px"
+                android:layout_centerInParent="true"
+                android:background="@drawable/shape_round_black_bg" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/ripple_anim_view"
+                android:layout_width="@dimen/common_len_140px"
+                android:layout_height="@dimen/common_len_140px"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                app:lottie_fileName="ripple.json"
+                app:lottie_imageAssetsFolder="images"
+                tools:visibility="visible" />
+
+            <cn.weli.svideo.module.task.component.widget.progress.ProgressView
+                android:id="@+id/video_progress_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+
+            <ImageView
+                android:id="@+id/coin_flay_img"
+                android:layout_width="@dimen/common_len_96px"
+                android:layout_height="@dimen/common_len_96px"
+                android:layout_centerInParent="true"
+                android:background="@drawable/anim_coin_fly"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/coin_img"
+                android:layout_width="@dimen/common_len_96px"
+                android:layout_height="@dimen/common_len_96px"
+                android:layout_centerInParent="true"
+                android:background="@drawable/jinbi_00" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/video_task_num_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/video_task_layout"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="@dimen/common_len_30px"
+            android:layout_marginRight="@dimen/common_len_30px"
+            android:background="@drawable/shape_video_progress_bg"
+            android:drawableStart="@drawable/home_icon_hongbao"
+            android:drawableLeft="@drawable/home_icon_hongbao"
+            android:drawablePadding="@dimen/common_len_10px"
+            android:paddingLeft="@dimen/common_len_18px"
+            android:paddingTop="@dimen/common_len_10px"
+            android:paddingRight="@dimen/common_len_18px"
+            android:paddingBottom="@dimen/common_len_10px"
+            android:textColor="@color/color_FFEC8E"
+            android:textSize="@dimen/common_text_size_24px"
+            android:visibility="invisible"
+            tools:text="0/9"
+            tools:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/video_coin_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/video_task_layout"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/common_len_40px"
+            android:layout_marginEnd="@dimen/common_len_150px"
+            android:layout_marginRight="@dimen/common_len_150px"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/video_coin_tip_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/common_len_60px"
+                android:background="@drawable/shape_video_task_tip_bg"
+                android:drawableStart="@drawable/money_icon_jinbi_small"
+                android:drawableLeft="@drawable/money_icon_jinbi_small"
+                android:drawablePadding="@dimen/common_len_10px"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_len_20px"
+                android:paddingRight="@dimen/common_len_20px"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/common_text_size_28px"
+                tools:text="+ 288" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/img_jiantou_right" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

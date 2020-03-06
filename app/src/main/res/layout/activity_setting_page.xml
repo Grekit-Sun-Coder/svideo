@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_common_toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/setting_argue_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_len_118px"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:paddingLeft="@dimen/common_len_30px"
+        android:paddingRight="@dimen/common_len_30px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableStart="@drawable/setting_icon_xieyi"
+            android:drawableLeft="@drawable/setting_icon_xieyi"
+            android:drawablePadding="@dimen/common_len_36px"
+            android:text="@string/setting_argue_title"
+            android:textColor="@color/color_E7E7E7"
+            android:textSize="@dimen/common_text_size_36px" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_jinru" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/setting_policy_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_len_118px"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:paddingLeft="@dimen/common_len_30px"
+        android:paddingRight="@dimen/common_len_30px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableStart="@drawable/setting_icon_yinsi"
+            android:drawableLeft="@drawable/setting_icon_yinsi"
+            android:drawablePadding="@dimen/common_len_36px"
+            android:text="@string/setting_policy_title"
+            android:textColor="@color/color_E7E7E7"
+            android:textSize="@dimen/common_text_size_36px" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_jinru" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/setting_permission_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_len_118px"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:paddingLeft="@dimen/common_len_30px"
+        android:paddingRight="@dimen/common_len_30px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableStart="@drawable/setting_icon_ysshezhi"
+            android:drawableLeft="@drawable/setting_icon_ysshezhi"
+            android:drawablePadding="@dimen/common_len_36px"
+            android:text="@string/setting_permission_title"
+            android:textColor="@color/color_E7E7E7"
+            android:textSize="@dimen/common_text_size_36px" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_jinru" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/setting_about_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_len_118px"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:paddingLeft="@dimen/common_len_30px"
+        android:paddingRight="@dimen/common_len_30px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableStart="@drawable/setting_icon_about"
+            android:drawableLeft="@drawable/setting_icon_about"
+            android:drawablePadding="@dimen/common_len_36px"
+            android:text="@string/setting_about_title"
+            android:textColor="@color/color_E7E7E7"
+            android:textSize="@dimen/common_text_size_36px" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_jinru" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/setting_account_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_len_118px"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:paddingLeft="@dimen/common_len_30px"
+        android:paddingRight="@dimen/common_len_30px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableStart="@drawable/setting_icon_logout"
+            android:drawableLeft="@drawable/setting_icon_logout"
+            android:drawablePadding="@dimen/common_len_36px"
+            android:text="@string/setting_account_title"
+            android:textColor="@color/color_E7E7E7"
+            android:textSize="@dimen/common_text_size_36px" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_jinru" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/setting_logout_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_len_118px"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:paddingLeft="@dimen/common_len_30px"
+        android:paddingRight="@dimen/common_len_30px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableStart="@drawable/setting_icon_out"
+            android:drawableLeft="@drawable/setting_icon_out"
+            android:drawablePadding="@dimen/common_len_36px"
+            android:text="@string/setting_logout_title"
+            android:textColor="@color/color_E7E7E7"
+            android:textSize="@dimen/common_text_size_36px" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_jinru" />
+    </RelativeLayout>
+</LinearLayout>

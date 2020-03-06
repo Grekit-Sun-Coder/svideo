@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/money_00"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_01"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_02"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_03"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_04"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_05"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_06"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_07"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_08"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_09"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_10"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_11"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_12"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_13"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_14"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_15"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_16"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_17"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_18"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_19"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_20"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_21"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_22"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_23"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_24"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_25"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_26"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_27"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_28"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_29"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_30"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_31"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_32"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_33"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_34"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_35"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_36"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_37"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_38"
+        android:duration="33" />
+    <item
+        android:drawable="@drawable/money_39"
+        android:duration="33" />
+</animation-list>

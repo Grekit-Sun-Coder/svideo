@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/weak_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/weak_dialog_bg">
+
+    <TextView
+        android:id="@+id/weak_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/common_len_40px"
+        android:textSize="@dimen/common_text_size_30px"
+        android:layout_centerInParent="true"
+        android:lineSpacingExtra="@dimen/common_len_20px"
+        android:textColor="@color/color_E7E7E7"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:padding="@dimen/common_len_30px"
+        android:src="@drawable/money_icon_close" />
+</RelativeLayout>

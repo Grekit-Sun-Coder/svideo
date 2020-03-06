@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pro_layout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_len_120px"
+    android:layout_margin="@dimen/common_len_15px"
+    android:background="@drawable/selector_withdraw_pro_item"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/price_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:textColor="@color/color_FFC244"
+        android:textSize="@dimen/common_text_size_46px"
+        android:textStyle="bold"
+        tools:text="0.5" />
+
+    <TextView
+        android:id="@+id/unit_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:text="@string/withdraw_price_title"
+        android:textColor="@color/color_FFC244"
+        android:textSize="@dimen/common_text_size_36px"
+        android:textStyle="bold" />
+</LinearLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_len_280px"
+    android:layout_margin="@dimen/common_len_40px"
+    android:background="@drawable/shape_white_20"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/share_wx_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/common_len_70px"
+            android:layout_weight="1"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableTop="@drawable/icon_weixin"
+                android:paddingTop="@dimen/common_len_20px"
+                android:drawablePadding="@dimen/common_len_10px"
+                android:gravity="center_horizontal"
+                android:text="@string/share_wx_title"
+                android:textColor="@color/color_333333" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/share_qq_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/common_len_70px"
+            android:layout_weight="1"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableTop="@drawable/icon_qq"
+                android:paddingTop="@dimen/common_len_20px"
+                android:drawablePadding="@dimen/common_len_10px"
+                android:gravity="center_horizontal"
+                android:text="@string/share_qq_title"
+                android:textColor="@color/color_333333" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/common_len_30px"
+        android:text="@string/share_top_title"
+        android:textColor="@color/color_333333"
+        android:textSize="@dimen/common_text_size_36px"
+        android:textStyle="bold" />
+
+</RelativeLayout>

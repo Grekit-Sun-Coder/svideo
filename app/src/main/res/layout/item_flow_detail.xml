@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:paddingLeft="@dimen/common_len_30px"
+    android:paddingRight="@dimen/common_len_30px"
+    android:paddingTop="@dimen/common_len_40px"
+    android:paddingBottom="@dimen/common_len_40px">
+
+    <TextView
+        android:id="@+id/flow_title_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_90_white"
+        android:textSize="@dimen/common_text_size_32px"
+        tools:text="签到奖励" />
+
+    <TextView
+        android:id="@+id/flow_time_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/flow_title_txt"
+        android:paddingTop="@dimen/common_len_18px"
+        android:textColor="@color/color_40_white"
+        android:textSize="@dimen/common_text_size_26px"
+        tools:text="2019.11.14" />
+
+    <TextView
+        android:id="@+id/flow_num_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:textColor="@color/color_80_DF343B"
+        android:textSize="@dimen/common_text_size_48px"
+        tools:text="80000" />
+
+    <TextView
+        android:id="@+id/flow_plus_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/common_str_plus"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/flow_num_txt"
+        android:layout_toStartOf="@id/flow_num_txt"
+        android:textColor="@color/color_80_DF343B"
+        android:textSize="@dimen/common_text_size_48px"/>
+</RelativeLayout>

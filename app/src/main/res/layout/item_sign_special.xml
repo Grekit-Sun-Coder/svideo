@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sign_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/common_len_190px"
+    android:background="@drawable/shape_sign_selected">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/sign_day_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/common_len_20px"
+            android:paddingTop="@dimen/common_len_46px"
+            android:paddingRight="@dimen/common_len_20px"
+            android:paddingBottom="@dimen/common_len_10px"
+            android:text="@string/task_has_sign_title"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/common_text_size_26px" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/sign_day_txt"
+            android:src="@drawable/home_icon_liwu" />
+
+        <TextView
+            android:id="@+id/sign_coin_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sign_day_txt"
+            android:paddingLeft="@dimen/common_len_20px"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/common_text_size_40px"
+            android:textStyle="bold"
+            tools:text="1000" />
+    </RelativeLayout>
+</LinearLayout>

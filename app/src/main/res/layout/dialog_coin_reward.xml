@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_len_480px"
+        android:layout_marginTop="@dimen/common_len_242px"
+        android:layout_marginBottom="@dimen/common_len_242px"
+        android:background="@drawable/shape_white_20"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/coin_title_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/common_len_110px"
+            android:text="@string/login_success_tip"
+            android:textColor="@color/color_FF7C21"
+            android:textSize="@dimen/common_text_size_40px"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/common_len_30px"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/task_login_left_title"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/common_text_size_32px" />
+
+            <TextView
+                android:id="@+id/login_coin_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/common_len_10px"
+                android:paddingRight="@dimen/common_len_10px"
+                android:textColor="@color/color_FFC244"
+                android:textSize="@dimen/common_text_size_80px"
+                tools:text="1000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/coin"
+                android:textColor="@color/color_666666"
+                android:textSize="@dimen/common_text_size_32px" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/close_txt"
+            android:layout_width="@dimen/common_len_360px"
+            android:layout_height="@dimen/common_len_100px"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/common_len_30px"
+            android:background="@drawable/shape_login_btn"
+            android:gravity="center"
+            android:text="@string/task_coin_more_title"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/common_text_size_36px"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/home_img_jinbi" />
+</RelativeLayout>

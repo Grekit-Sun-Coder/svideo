@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coin_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_len_220px"
+        android:layout_marginBottom="@dimen/common_len_220px"
+        android:background="@drawable/shape_white_20"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/coin_title_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/common_len_130px"
+            android:text="@string/task_open_coin_get_title"
+            android:textColor="@color/color_333333"
+            android:textSize="@dimen/common_text_size_40px"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/common_len_40px"
+            android:layout_marginBottom="@dimen/common_len_40px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/coin_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:paddingLeft="@dimen/common_len_10px"
+                android:paddingRight="@dimen/common_len_10px"
+                android:textColor="@color/color_FFC244"
+                android:textSize="@dimen/common_text_size_80px"
+                tools:text="1000" />
+
+            <ImageView
+                android:layout_width="@dimen/common_len_66px"
+                android:layout_height="@dimen/common_len_66px"
+                android:src="@drawable/icon_jinbi" />
+        </LinearLayout>
+
+        <com.qq.e.ads.nativ.widget.NativeAdContainer
+            android:id="@+id/coin_ad_place_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_len_20px"
+            android:layout_marginRight="@dimen/common_len_20px">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/coin_ad_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_len_380px"
+                app:cardBackgroundColor="@color/color_transparent"
+                app:cardCornerRadius="@dimen/common_len_12px"
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:id="@+id/coin_ad_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_F5F5F5" />
+
+                <ImageView
+                    android:id="@+id/coin_ad_icon_img"
+                    android:layout_width="@dimen/common_len_50px"
+                    android:layout_height="@dimen/common_len_40px"
+                    android:layout_gravity="end|bottom"
+                    android:src="@drawable/toutiao_logo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/shape_white_stoke_4"
+                    android:gravity="center"
+                    android:layout_margin="@dimen/common_len_10px"
+                    android:padding="@dimen/common_len_5px"
+                    android:text="@string/ad_title"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/common_text_size_20px" />
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/three_pic_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_len_188px"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/coin_ad1_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/common_len_8px"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/color_transparent"
+                    app:cardCornerRadius="@dimen/common_len_12px"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:id="@+id/coin_ad1_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/color_F5F5F5" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginStart="@dimen/common_len_10px"
+                        android:layout_marginBottom="@dimen/common_len_10px"
+                        android:padding="@dimen/common_len_5px"
+                        android:background="@drawable/shape_white_stoke_4"
+                        android:gravity="center"
+                        android:text="@string/ad_title"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/common_text_size_20px" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/coin_ad2_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/common_len_8px"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/color_transparent"
+                    app:cardCornerRadius="@dimen/common_len_12px"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:id="@+id/coin_ad2_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/color_F5F5F5" />
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/coin_ad3_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/common_len_8px"
+                    android:layout_marginRight="@dimen/common_len_8px"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/color_transparent"
+                    app:cardCornerRadius="@dimen/common_len_12px"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:id="@+id/coin_ad3_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/color_F5F5F5" />
+
+                    <ImageView
+                        android:id="@+id/coin_ad_icon_three_img"
+                        android:layout_width="@dimen/common_len_50px"
+                        android:layout_height="@dimen/common_len_40px"
+                        android:layout_gravity="end|bottom"
+                        android:src="@drawable/img_jinritoutiao" />
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+        </com.qq.e.ads.nativ.widget.NativeAdContainer>
+
+        <TextView
+            android:id="@+id/coin_ad_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:padding="@dimen/common_len_20px"
+            android:singleLine="true"
+            android:textColor="@color/color_222222"
+            android:textSize="@dimen/common_text_size_30px"
+            tools:text="全新奥迪A3荣耀上市！19.99万起！" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/home_img_baoxiang_open" />
+
+    <ImageView
+        android:id="@+id/close_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/common_len_220px"
+        android:padding="@dimen/common_len_30px"
+        android:src="@drawable/icon_close" />
+</RelativeLayout>

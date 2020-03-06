@@ -1,0 +1,238 @@
+<resources>
+    <string name="app_name">鲤刷刷</string>
+
+    <!-- 常用 -->
+    <string name="mobile_number">手机号</string>
+    <string name="mobile_code">验证码</string>
+    <string name="coin">金币</string>
+    <string name="today">今天</string>
+    <string name="well">好的</string>
+
+    <!-- 主页 -->
+    <string name="splash_user_privacy_title">个人信息保护指引</string>
+    <string name="user_protocol_string">1、用户信息安全与隐私保护为自己的“生命线”。我们秉承“一切以用户价值为依归”的理念，致力于提升信息处理透明度，增强您对信息管理的便捷性，保障您的信息及通信安全。\n 2、我们竭尽全力通过合理有效的信息安全技术及管理流程，防止您的信息泄露、损毁、丢失。</string>
+    <string name="user_permission_string">1、手机设备信息：鲤刷刷需要读取用户手机设备信息，以保证用户功能和服务的正常使用。\n2、存储权限：鲤刷刷需要通过写入缓存的方式存储用户的相关数据，以保证服务的可用性。\n3、定位权限：鲤刷刷为用户推荐的视频内容中有与用户地理位置相关的内容。为此我们将收集用户的定位信息，以保障用户可以有更好的浏览体验。\n如果您不使用这些功能，可以不开启以上权限，我们将依法保护您的个人信息安全。</string>
+    <string name="user_permission_tip2">如果您同意《用户协议》和《隐私权政策》，请点击“继续使用”开始使用我们的产品和服务。</string>
+    <string name="splash_give_up_title">放弃并退出</string>
+    <string name="splash_ok_title">继续使用</string>
+    <string name="splash_privacy_title1">亲爱的用户，我们深知个人信息对您的重要性，并会尽全力保护您的个人信息安全。请您使用前充分阅读我们的</string>
+    <string name="splash_privacy_title2">《用户协议》</string>
+    <string name="splash_privacy_title3">《隐私权政策》</string>
+    <string name="splash_privacy_title4">，在您使用鲤刷刷时，部分功能需要您自行开启以下权限：</string>
+
+    <!-- 主页 -->
+    <string name="main_quit_str">再按一次退出</string>
+    <string name="main_money_str">赚钱</string>
+    <string name="main_version_str">版本更新</string>
+    <string name="main_update_str">立即更新</string>
+    <string name="main_find_update">发现新版本</string>
+    <string name="main_update_content">更新内容：</string>
+    <string name="main_update_remind">正在后台为您更新鲤刷刷</string>
+    <string name="main_force_cancel_str">取消并退出</string>
+    <string name="main_no_permission_str">点击"去设置"打开通知接收每日现金收益提醒</string>
+
+    <!-- 视频首页 -->
+    <string name="video_title">首页</string>
+    <string name="video_empty_title">暂无视频</string>
+    <string name="video_like_title">点赞</string>
+    <string name="video_count_title">%1$sw</string>
+    <string name="video_task_count_title">%1$s/%2$s</string>
+    <string name="video_guide_title">上下滑动查看更多视频</string>
+    <string name="video_get_coin_title">点我领金币</string>
+    <string name="video_own_coin_title">金币已经到账了，多看多赚！</string>
+    <string name="video_rotate_title">上滑继续看视频进度条会转起来啦</string>
+    <string name="video_big_reward_title">转满9圈会得到大奖</string>
+    <string name="video_task_get_title">恭喜你，获得金币%1$s</string>
+    <string name="video_complete_play_title">点击重播</string>
+    <string name="ad_install_success_title">打开应用</string>
+    <string name="ad_install_title">点击安装</string>
+    <!-- 赚钱任务 -->
+    <string name="task_title">赚钱</string>
+    <string name="task_coin_get_title">金币收益</string>
+    <string name="task_cash_get_title">现金收益</string>
+    <string name="task_coin_info_title">金币每日凌晨自动兑换成现金</string>
+    <string name="task_do_title">做任务</string>
+    <string name="task_done_title">已完成</string>
+    <string name="task_do_progress_title">(%1$s/%2$s)</string>
+    <string name="task_login_left_title">恭喜获得</string>
+    <string name="task_coin_more_title">点击赚更多</string>
+    <string name="task_has_done_title">当前任务已完成</string>
+    <string name="task_has_sign_title">已签到</string>
+    <string name="task_sign_coin_title">今日签到+%1$s金币</string>
+    <string name="task_reward_title">激励视频</string>
+    <string name="task_reward_tip_title">恭喜，观看视频</string>
+    <string name="task_add_title">+%s</string>
+    <string name="task_bind_title">填写邀请码成功</string>
+    <string name="task_has_title">已检测到邀请码&#160;</string>
+    <string name="task_auto_title">&#160;是否自动填写赚金币</string>
+    <string name="task_find_title">填我邀请码</string>
+    <string name="task_left_tag_title">【</string>
+    <string name="task_right_tag_title">】</string>
+    <string name="task_open_coin_title">开箱领金币</string>
+    <string name="task_open_coin_time_title">等到倒计时结束后再来领取吧~</string>
+    <string name="task_open_coin_wait_title">待领取</string>
+    <string name="task_open_coin_video_title">看视频开宝箱</string>
+    <string name="task_open_coin_cancel_title">放弃开宝箱</string>
+    <string name="task_open_coin_get_title">恭喜获得</string>
+    <string name="task_no_per_title">开启通知，每日现金收益提醒不错过</string>
+    <string name="task_go_open_title">去开启</string>
+
+    <!-- 我的 -->
+    <string name="mine_title">我的</string>
+    <string name="mine_join_time_title">%s加入</string>
+    <string name="mine_collect_video_title">我喜欢的视频</string>
+    <string name="mine_collect_video_empty_title">快去点赞小视频吧</string>
+    <string name="mine_illegal_account">违规账号</string>
+    <string name="mine_in_blacklist">因违规行为，您的账号被暂时封禁。如有疑问请添加微信公众号“鲤刷刷”联系客服。</string>
+
+    <!-- 登录 -->
+    <string name="login_title">登录</string>
+    <string name="login_welcome_title">欢迎登录</string>
+    <string name="login_get_code_title">获取验证码</string>
+    <string name="login_new_code_title">重新获取</string>
+    <string name="login_count_title">%s秒</string>
+    <string name="login_left_argue_title">我已阅读并同意&#160;</string>
+    <string name="login_argue_title"> “用户协议” </string>
+    <string name="login_center_argue_title">&#160;和&#160;</string>
+    <string name="login_right_argue_title">“隐私政策”</string>
+    <string name="login_agree_tip">请同意勾选用户协议和隐私政策</string>
+    <string name="login_phone_tip">请输入正确的手机号</string>
+    <string name="login_code_success_tip">验证码发送成功</string>
+    <string name="login_success_tip">登录成功</string>
+
+    <!-- 提现 -->
+    <string name="withdraw_title">提现</string>
+    <string name="withdraw_rule_title">规则说明</string>
+    <string name="withdraw_income_title">现金收益</string>
+    <string name="withdraw_progress_title">提现进度</string>
+    <string name="withdraw_empty_info_title">尚未设置支付宝提现账户</string>
+    <string name="withdraw_wx_empty_info_title">尚未设置微信提现账户</string>
+    <string name="withdraw_empty_account_title">请先绑定提现信息</string>
+    <string name="withdraw_has_set_info_title">已设置</string>
+    <string name="withdraw_set_info_title">去设置</string>
+    <string name="withdraw_now_title">立即提现</string>
+    <string name="withdraw_price_title">&#160;&#160;元</string>
+    <string name="withdraw_rule_detail_title">1、每天仅可使用提现额度提现一次，剩余金额可在下次满足条件时申请提现。\n\n2、提现成功后通常会在1个工作日到账，请您耐心等待。\n\n3、为保证您顺利提现，您需按照提现页面规范操作，如您未按提现要求操作导致提现金额不能到账（如未做实名认证或填错提现账户信息等）。本平台不对此承担责任。\n\n4、如遇到问题，请添加微信公众号“鲤刷刷”联系客服咨询</string>
+    <string name="withdraw_success_title">提现成功</string>
+
+    <!-- 输入提现账号 -->
+    <string name="ali_bind_title">输入提现账号</string>
+    <string name="ali_bind_name_title">真实姓名</string>
+    <string name="ali_bind_account_title">支付宝</string>
+    <string name="wx_bind_account_title">微信</string>
+    <string name="wx_bind_title">微信账号</string>
+    <string name="wx_go_bind_title">去绑定</string>
+    <string name="wx_go_has_bind_title">已绑定</string>
+    <string name="ali_bind_id_title">身份证号</string>
+    <string name="ali_bind_name_input_title">支付号实名</string>
+    <string name="ali_bind_account_input_title">支付宝账号</string>
+    <string name="ali_bind_id_input_title">身份证号码</string>
+    <string name="ali_bind_input_title">支付宝账户、姓名、身份证输入错误将无法提现到账</string>
+    <string name="wx_bind_input_title">姓名、身份证输入错误将无法提现到账</string>
+    <string name="ali_bind_input_complete_title">完成设置</string>
+    <string name="ali_bind_info_title">温馨提示\n\n1、使用支付宝提现需要您已注册之粗暴并在支付宝中实名认证过。\n\n2、支付宝账号是您注册支付宝的手机号或者邮箱号，您可登录支付宝查看。\n\n3、我们不会保存您的姓名和支付宝账号，并会按照个人隐私协议中的条款保障您的隐私安全。</string>
+    <string name="wx_bind_info_title">温馨提示\n\n1、请确保微信已实名认证，未实名认证的微信号将会转账失败。\n\n2、确保信息准确，一旦完成认证将不可修改。\n\n3、我们承诺不会向任何人透露你的信息，并会按照个人隐私协议中的条款保障您的隐私安全。</string>
+    <string name="ali_bind_input_success_title">设置成功</string>
+
+    <!-- 我的收益 -->
+    <string name="profit_title">我的收益</string>
+    <string name="profit_info_title">收益说明</string>
+    <string name="profit_withdraw_title">去提现</string>
+    <string name="profit_rate_title">汇率</string>
+    <string name="profit_income_title">%s元</string>
+    <string name="profit_total_income_title">已累计赚到&#160;&#160;</string>
+    <string name="profit_add_plus_title">+&#160;%s</string>
+    <string name="profit_add_title">&#160;%s</string>
+    <string name="profit_remove_title">&#160;%s</string>
+    <string name="profit_money_add_title">&#160;%s&#160;元</string>
+    <string name="profit_money_remove_title">&#160;%s&#160;元</string>
+    <string name="profit_empty_title">暂无数据</string>
+    <string name="profit_detail_title">1、每日凌晨自动结算上一日金币,若金币没有到账，别担心，可能会有延迟。\n\n2、金币兑换现金汇率受每日运营收益影响，会有浮动。\n\n3、如果您连续60天未登录本APP，那么未提现的金币和现金都将过期，逾期视为您自愿放弃提现的权利，金币和现金将被清零。</string>
+    <string name="profit_watch_title">看小视频赚钱</string>
+
+    <!-- 消息 -->
+    <string name="msg_title">消息</string>
+    <string name="msg_empty_title">暂无消息</string>
+
+    <!-- 设置 -->
+    <string name="setting_title">设置</string>
+    <string name="setting_argue_title">鲤刷刷用户协议</string>
+    <string name="setting_policy_title">鲤刷刷隐私政策</string>
+    <string name="setting_about_title">关于我们</string>
+    <string name="setting_permission_title">隐私设置</string>
+    <string name="setting_logout_title">退出登录</string>
+    <string name="setting_account_title">注销账号</string>
+    <string name="setting_logout_tip">确定要退出当前账号吗？</string>
+    <string name="setting_logout_success_tip">退出登录成功</string>
+
+    <!-- 个人中心 -->
+    <string name="user_info_title">个人中心</string>
+    <string name="user_info_head_title">头像</string>
+    <string name="user_info_nickname_title">昵称</string>
+    <string name="user_info_nickname_change">修改昵称</string>
+    <string name="user_info_nickname_input">请输入昵称</string>
+    <string name="user_info_sex_title">性别</string>
+    <string name="user_info_sex_none">未知</string>
+    <string name="user_info_sex_man">男</string>
+    <string name="user_info_sex_woman">女</string>
+    <string name="user_info_phone_title">手机号</string>
+
+    <!-- 关于 -->
+    <string name="about_title">关于我们</string>
+    <string name="about_version_title">鲤刷刷&#160;&#160;v%s</string>
+    <string name="about_wx_title">腾讯微信</string>
+    <string name="about_wx_content_title">请搜索“鲤刷刷”</string>
+    <string name="about_right_title">©微鲤&#160;&#160;版权所有</string>
+
+    <!-- 分享 -->
+    <string name="share_title">分享</string>
+    <string name="share_top_title">分享到</string>
+    <string name="share_wx_title">微信</string>
+    <string name="share_qq_title">QQ</string>
+    <string name="share_how_title">如何分享</string>
+    <string name="share_detail_title">1.选择微信好友或微信群\n2.在聊天窗口长按【粘贴】即可\n3.下载APP后再任务页补填邀请码</string>
+    <string name="share_action_title">去粘贴分享</string>
+    <string name="share_wx_not_installed">系统未安装微信客户端</string>
+    <string name="share_qq_not_installed">系统未安装QQ客户端</string>
+    <string name="share_pyq_title">朋友圈</string>
+    <string name="share_copy_url_title">复制链接</string>
+    <string name="share_report_title">举报</string>
+    <string name="share_not_interested_title">不感兴趣</string>
+    <string name="share_cancel">取消</string>
+    <string name="share_wx_has_copy">客服微信号已复制，“添加朋友”时长按粘贴即可</string>
+    <string name="share_video_sub_title">我和%1$s人都在看，快来一起围观</string>
+    <string name="share_success_title">分享成功</string>
+    <string name="share_failed_title">分享失败</string>
+    <string name="share_cancel_title">分享取消</string>
+    <string name="share_copy_title">复制成功</string>
+    <string name="share_report_success_title">举报成功，我们会认真处理您的反馈</string>
+    <string name="share_delete_success_title">操作成功，将减少此类视频的推荐</string>
+
+    <!-- 广告 -->
+    <string name="ad_title">广告</string>
+    <string name="today_detail_txt">查看详情</string>
+    <string name="start_download">开始下载</string>
+    <string name="str_download_dialog_msg">当前处于非WiFi网络环境下，开始下载应用？</string>
+    <string name="str_download">立即下载</string>
+    <string name="watch_get_coin_txt">查看领取</string>
+    <string name="download_get_coin_txt">安装领取</string>
+    <string name="ad_downloading_txt">下载中</string>
+    <string name="ad_open_txt">打开</string>
+    <string name="reward_success_txt">成功获取奖励</string>
+    <string name="reward_fail_txt">获取金币失败</string>
+    <string name="ad_open_app">打开应用</string>
+    <string name="ad_setup_app">立即安装</string>
+    <string name="ad_download_failed_app">下载失败，重新下载</string>
+    <string name="ad_get_failed">所有广告加载均失败</string>
+    <string name="rewarded_txt">您已获得该奖励</string>
+    <!-- 上传 -->
+    <string name="upload_path_error">图片路径获取失败，请重试</string>
+    <string name="upload_file_error">图片文件不存在，请重试</string>
+    <string name="upload_fail_error">图片上传失败，请重试</string>
+
+    <!-- 设置 -->
+    <string name="permission_phone_title">允许鲤刷刷查看电话信息</string>
+    <string name="permission_location_title">允许鲤刷刷查看位置信息</string>
+    <string name="permission_file_title">允许鲤刷刷查看文件存储信息</string>
+    <string name="permission_camera_title">允许鲤刷刷查看相机信息</string>
+</resources>
